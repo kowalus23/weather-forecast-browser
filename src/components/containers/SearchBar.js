@@ -11,6 +11,10 @@ class SearchBar extends React.Component {
     }
   }
 
+  componentDidMount() {
+    this.props.fetchWeather('Warsaw')
+  }
+
   onInputChange = (event) => {
     this.setState({
       term: event.target.value
@@ -29,7 +33,7 @@ class SearchBar extends React.Component {
         <input
           type="text"
           placeholder="Get a five-day forecast in your favorite cities"
-          className="form-control w-50"
+          className="form-control w-50 text-center"
           value={this.state.term}
           onChange={this.onInputChange}
         />
@@ -38,7 +42,7 @@ class SearchBar extends React.Component {
             type="submit"
             className="btn btn-secondary"
             onClick={this.onSubmit}
-          >Submit</button>
+          >Search</button>
         </span>
       </form>
     );
