@@ -6,6 +6,10 @@
     min-width: 520px;
 }
 
+th {
+    vertical-align: middle !important;
+}
+
 .custom-select {
     width: 10%;
 }
@@ -46,7 +50,7 @@
 }
 
 @media (max-width: 349px) {
-    .form-control{
+    .form-control {
         width: 65% !important;
     }
 }

@@ -27,9 +27,9 @@ class WeatherList extends React.Component {
         <thead className="thead-dark">
         <tr className="text-center">
           <th>City</th>
-          <th>Temperature</th>
-          <th>Pressure</th>
-          <th>Humidity</th>
+          <th>Temperature (C)</th>
+          <th>Pressure (hPa)</th>
+          <th>Humidity (%)</th>
         </tr>
         </thead>
         <tbody className="text-center">
