@@ -8,11 +8,12 @@ class SearchBar extends React.Component {
 
     this.state = {
       term: '',
+      isoValue: 'pl'
     }
   }
 
   componentDidMount() {
-    this.props.fetchWeather('Warsaw')
+    this.props.fetchWeather('Warsaw', 'pl')
   }
 
   onInputChange = (event) => {
@@ -21,10 +22,16 @@ class SearchBar extends React.Component {
     });
   };
 
+  onSelectChange = (event) => {
+    this.setState({
+      isoValue: event.target.value
+    })
+  };
+
   onSubmit = (event) => {
     event.preventDefault();
 
-    this.props.fetchWeather(this.state.term);
+    this.props.fetchWeather(this.state.term, this.state.isoValue);
     this.setState({
       term: ''
     })
@@ -35,20 +42,24 @@ class SearchBar extends React.Component {
       <div>
         <h3 className="text-center mt-3">5-days Weather searcher</h3>
         <form className="form-inline justify-content-center my-4" action="">
+          <select className="custom-select mr-3" onChange={this.onSelectChange}>
+            <option value="pl">PL</option>
+            <option value="nl">NL</option>
+            <option value="fr">FR</option>
+          </select>
           <input
             type="text"
             placeholder="City Name"
-            className="form-control w-50 text-center"
+            className="form-control text-center"
             value={this.state.term}
             onChange={this.onInputChange}
           />
-          <span className="input-group-btn ml-3">
           <button
             type="submit"
-            className="btn btn-dark"
-            onClick={this.onSubmit}
-          >Search</button>
-        </span>
+            className="btn btn-dark custom-button"
+            onClick={this.onSubmit}>
+            Search
+          </button>
         </form>
       </div>
     );

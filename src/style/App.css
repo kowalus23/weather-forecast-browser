@@ -5,3 +5,48 @@
 .table {
     min-width: 520px;
 }
+
+.custom-select {
+    width: 10%;
+}
+
+.btn.btn-dark.custom-button {
+    margin-left: 1rem;
+}
+
+.form-control {
+    width: 40% !important
+}
+
+@media (max-width: 768px) {
+    .custom-select {
+        width: 15%;
+    }
+}
+
+@media (max-width: 450px) {
+    h2.__custom {
+        font-size: 1.4rem !important;
+        word-break: break-word;
+    }
+
+    .custom-select {
+        width: 25%;
+    }
+
+    .form-control {
+        width: 70% !important;
+    }
+
+    .btn.btn-dark.custom-button {
+        margin-left: 0;
+        margin-top: 1rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 349px) {
+    .form-control{
+        width: 65% !important;
+    }
+}
