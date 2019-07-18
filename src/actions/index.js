@@ -2,7 +2,7 @@ import axios from 'axios'
 import {FETCH_WEATHER} from "./types";
 
 const API_KEY = '245f56885be0894b0b4c324ba6f51211';
-const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?`;
+const ROOT_URL = `https://api.openweathermap.org/data/2.5/forecast?`;
 
 
 export const fetchWeather = (city, iso) => async dispatch => {
