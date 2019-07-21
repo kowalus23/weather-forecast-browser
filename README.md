@@ -1,3 +1,5 @@
+Live view - https://kowalus23.github.io/weather-forecast-browser/
+
 Simple weather checker for next few days for X cities, at start i'll add them as default cities, then maybe i'll switch to "choose" option
 ## Available Scripts
 
